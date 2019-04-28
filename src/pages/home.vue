@@ -11,7 +11,8 @@
           <f7-icon 
             ios="f7:bars" 
             aurora="f7:bars"
-            class="icon f7-icons ios-only">
+            md="material:bars"
+            class="icon f7-icons">
           </f7-icon>
         </f7-link>
       </f7-nav-left>
@@ -19,9 +20,10 @@
       <f7-nav-right>
         <f7-link icon-only panel-open="right">
           <f7-icon 
-            ios="f7:bell" 
+            ios="f7:bell"
             aurora="f7:bell"
-            class="icon f7-icons ios-only">
+            md="material:bell"
+            class="icon f7-icons">
             <f7-badge color="red">2</f7-badge>
           </f7-icon>
         </f7-link>
