@@ -5,11 +5,19 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "copy-fonts": "cpy node_modules/framework7-icons/fonts/*.* src/fonts && cpy node_modules/material-design-icons/iconfont/*.{eot,ttf,woff,woff2} src/fonts",
+    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
+    "postinstall": "npm run copy-fonts"
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "framework7": "^3.4.3",
+    "framework7-icons": "^0.9.1",
+    "framework7-vue": "^4.3.0",
+    "material-design-icons": "^3.0.1",
     "vue": "^2.6.10",
+    "vue-i18n": "^8.0.0",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
   },
@@ -18,8 +26,12 @@
     "@vue/cli-plugin-eslint": "^3.6.0",
     "@vue/cli-service": "^3.6.0",
     "babel-eslint": "^10.0.1",
+    "cpy-cli": "^2.0.0",
+    "css-loader": "^1.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "vue-cli-plugin-framework7": "^0.1.1",
+    "vue-cli-plugin-i18n": "^0.6.0",
     "vue-template-compiler": "^2.5.21"
   }
 }
